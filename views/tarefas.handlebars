@@ -1,0 +1,43 @@
+<style>
+    #selected {
+        background-color: #2fb86e;
+
+    }
+</style>
+<h2>Lista de Tarefas</h2>
+<p>Ordenando por:</p>
+<select name="ordenar" class="custom-select" >
+    <option value="prioridade">Data</option>
+
+</select>
+<hr>
+{{#each tarefas}}
+    <div class="card mt-4" >
+        <div class="card-body" style="border-box: 15px;">
+            <h4>{{titulo}}</h4>
+            <p>descrição:</p>
+            <p>{{descricao}}</p>
+            prioridade da tarefa:
+            <strong><p>{{prioridade}}</p></strong>
+            Prazo da tarefa: <br>
+            <small>{{formatDate }}</small><br>
+        <a href="/tarefas/edit/{{_id}}"><button class="btn btn-primary mt-4">Editar Tarefa</button></a>
+        <form action="/tarefas/deletar" method="POST">
+            <input type="hidden" name="id" value="{{_id}}">
+            <button class="btn btn-danger mt-4">Remover Tarefa</button><br>
+        </form>
+        </div>
+    </div>
+{{else}}
+    <h3>Nenhuma Tarefa</h3>
+    <a href="/addtarefas"><button class="btn btn-success">Adicionar uma nova tarefa</button></a>
+{{/each}}
+
+<script>
+        function myFunction() {
+        document.getElementById("demo").style.color = "green";
+        document.getElementById(demo).innerText("Tarefa Concluida")
+}
+
+
+</script>
