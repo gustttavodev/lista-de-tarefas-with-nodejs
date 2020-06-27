@@ -1,12 +1,12 @@
-# listadetarefas
-CRUD usando Nodejs + Mongodb
+# Listadetarefas 🗒
+CRUD usando Nodejs + Mongodb 
 # Dependencies
-→ Handlebars      
-→ Nodejs        
-→ MongoDB       
+→ Handlebars ✅     
+→ Nodejs ✅       
+→ MongoDB ✅      
 # Run
-→ npm install
+→ npm install ⚡
 # Run server
-→ npm start
+→ npm start 
 
 
